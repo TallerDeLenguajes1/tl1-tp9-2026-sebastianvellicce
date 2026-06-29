@@ -35,6 +35,6 @@ foreach (string archivoL in archivos)
 {
     FileInfo infoAEscribir = new FileInfo(archivoL);
     double tamanoKbyte = infoAEscribir.Length/1024.0;
-    lineas.Add($"{infoAEscribir.Name},{tamanoKbyte:F2}KB,{infoAEscribir.LastWriteTime}");
+    lineas.Add($"{infoAEscribir.Name}, {tamanoKbyte:F2}KB, {infoAEscribir.LastWriteTime}");
 }
 File.WriteAllLines(rutaSalida, lineas);
